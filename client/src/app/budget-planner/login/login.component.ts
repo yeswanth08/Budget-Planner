@@ -11,6 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
+
 export class LoginComponent {
 loginForm:any;
 registerForm:any;
@@ -39,7 +40,7 @@ toggleForm(form: 'login' | 'register') {
 login() {
   if (this.loginForm.valid) {
     console.log("Login info==>", this.loginForm.value);
-    this.router.navigate(['/budget-planner/dashboard']);
+    this.router.navigate(['/app/dashboard']);
   } else {
     this.snackBar.open('Invalid email or password!', 'Close', { duration: 3000 });
   }
@@ -50,11 +51,10 @@ register() {
     setTimeout(() => {
       window.location.reload();
     }, 2000);
-    this.router.navigate(['/budget-planner/login']);
+    this.router.navigate(['/app/login']);
   } else {
     this.snackBar.open('Please fill in all fields correctly!', 'Close', { duration: 3000 });
   }
 }
-
 
 }

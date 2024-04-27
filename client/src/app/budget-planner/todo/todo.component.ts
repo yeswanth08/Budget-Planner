@@ -80,7 +80,7 @@ export class TodoComponent {
     switch (this.selectedMonth) {
       case 'January':
         filteredExpense = [...this.januaryExpense];
-        break;
+        break;  
       case 'February':
         filteredExpense = [...this.februaryExpense];
         break;
@@ -127,7 +127,7 @@ export class TodoComponent {
   }
 
   onBack() {
-    this.router.navigate(['/budget-planner/dashboard']);
+    this.router.navigate(['/app/dashboard']);
   }
 
   toggleSelection(expense: any) {
